@@ -15,6 +15,31 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+
+  if (a==0)||(b==0)||(c==0)
+    raise TriangleError 
+
+  elsif (a<0)||(b<0)||(c<0)
+    raise TriangleError 
+
+  elsif (c>(a+b))||(b>(a+c))||(a>(b+c))
+    raise TriangleError 
+
+  elsif ((a+b)==c)||((b+c)==a)||(b==(a+c))
+    raise TriangleError 
+
+   end 
+  
+  if (a==b)&&(b==c)&&(c==a)
+    :equilateral
+  elsif (a==b)||(b==c)||(a==c)
+    :isosceles
+  else
+    :scalene
+  end
+
+  #end
+    
 end
 
 # Error class used in part 2.  No need to change this code.
